@@ -1,0 +1,272 @@
+/* Global Settings */
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+li{
+    list-style: none;
+}
+
+input{
+    border: none;
+    text-align: center;
+}
+
+input:focus::placeholder{
+    opacity: 0;
+}
+
+/*-----------------------------------------------------------------------------------------------------*/
+
+
+/* Containers */
+
+#mainContainer{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden; 
+    background: url(../img/mainBackground.png) no-repeat center;
+}
+
+#contentContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+#currentInfoContainer{
+    min-width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#searchContainer{
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-bottom: 2px #FFFFFF solid;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;   
+}
+
+#cardContainer, .front, .back{
+    width: 100%;
+    margin-top: 1%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#graphContainer{
+    width: 100%;
+    margin-top: 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/*-----------------------------------------------------------------------------------------------------*/
+
+
+/* Search Input Style*/
+
+#searchInput{
+    min-width: 30%;
+    min-height: 40px;
+    border-radius: 10em;
+}
+
+/*-----------------------------------------------------------------------------------------------------*/
+
+
+/* Local Location Information */
+
+#localLocationInformationContainer{
+    width: 100%;
+    height: 100%;
+    color: #FFFFFF;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+#localLocationName, #currentLocalInfo, #searchInputContainer{
+    min-width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#localLocationName{
+   font-size: 2em;
+}
+
+#currentLocalInfo{
+   width: 65%;
+   display: flex;
+   flex-wrap: wrap;
+   margin-left: 2%;
+   font-size: 1.25em;
+}
+
+#currentWeatherIcon{
+    width: 100px;
+    height: 100px;
+}
+
+/*-----------------------------------------------------------------------------------------------------*/
+
+
+/* Card Style */
+
+.dayCard{
+    width: 370px;
+    height: 370px;
+    margin: 1%;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 2px white solid;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.dayCard > *{
+    color: #FFFFFF;
+    font-size: 22px;
+    text-align: center;
+}
+
+.dayCard > .cardIcon{
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+.dayCard > .cardSummary{
+    width: 90%;
+    font-size: 15px;
+    overflow-wrap: normal;
+}
+
+/*-----------------------------------------------------------------------------------------------------*/
+
+
+
+/* Rotate Icon Style */
+
+.rotateIconContainer{
+    width: 100px;
+    height: 100px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    position: absolute;
+    top: 44%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.rotateIconContainer:hover{
+    cursor: pointer;
+}
+
+.rotateIcon{
+    width: 70%;
+    height: 70%;
+    background: url(../img/rotateIcon.jpg) no-repeat center;
+    background-size: contain;
+}
+
+/*-----------------------------------------------------------------------------------------------------*/
+
+
+
+/* Graph Style */
+
+#todayForecastTitle{
+    width: 65%;
+    min-height: 100px;
+    margin: 2% auto 1% auto;
+    border-radius: 1em;
+    border: 2px white solid;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 30px;
+}
+
+#graphSizing{
+   width: 90%;
+   height: 60%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   margin: 0 auto; 
+   border-radius: 1em;
+   background-color: #FFFFFF;
+}
+
+/*-----------------------------------------------------------------------------------------------------*/
+
+
+
+/* Media Queries */
+
+@media only screen and (max-width: 1645px) {
+
+    #graphContainer{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 810px) {
+
+    #graphContainer{
+        display: none;
+    }
+
+    #currentWeatherIcon{
+        display: none;
+    }
+
+    #currentLocalInfo{
+        font-size: 0.75em;
+    }
+
+    #localLocationName{
+        font-size: 1em;
+    }
+  
+}
+
+@media only screen and (max-width: 779px) {
+
+    #mainContainer{
+        overflow: auto;
+    }
+    
+    .rotateIconContainer{
+        display: none;
+    }
+
+    #searchInputContainer{
+        max-width: 30%;
+    }
+  
+}
+
+/*-----------------------------------------------------------------------------------------------------*/
+
+

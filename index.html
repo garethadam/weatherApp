@@ -1,0 +1,152 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title>Weather App</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+
+    <div id="mainContainer">
+
+        <div id="searchContainer">
+
+            <div id="localLocationInformationContainer">
+
+                <div id="currentInfoContainer">
+                    <div id="currentWeatherIcon"></div>
+                    <div id="currentLocalInfo"></div>  
+                </div>
+
+                <div id="localLocationName"></div>
+                <div id="searchInputContainer">
+                        <input id="searchInput" placeholder="Search a location">
+                </div> 
+            </div>
+
+        </div>
+
+        <div id="contentContainer">
+
+                <div id="cardContainer">
+
+                    <div class="front">
+
+                        <div class="rotateIconContainer">
+                            <div class="rotateIcon"></div>
+                        </div>
+
+                        <div id="currentDayForecast" class="dayCard">
+                            <div class="cardDayAndDate"></div>
+                            <div class="cardLowAndHighTemp"></div>
+                            <div class="cardAvgTemp"></div>
+                            <div class="cardIcon"></div>
+                            <div class="cardSummary"></div>                       
+                            <div class="cardWindSpeed"></div>
+                            <div class="cardHumidity"></div>
+                        </div>
+                        <div id="firstDayofWeekForecast" class="dayCard">
+                            <div class="cardDayAndDate"></div>
+                            <div class="cardLowAndHighTemp"></div>
+                            <div class="cardAvgTemp"></div>
+                            <div class="cardIcon"></div>
+                            <div class="cardSummary"></div>                       
+                            <div class="cardWindSpeed"></div>
+                            <div class="cardHumidity"></div>
+                        </div>
+                        <div id="secondDayofWeekForecast" class="dayCard">
+                            <div class="cardDayAndDate"></div>
+                            <div class="cardLowAndHighTemp"></div>
+                            <div class="cardAvgTemp"></div>
+                            <div class="cardIcon"></div>
+                            <div class="cardSummary"></div>                       
+                            <div class="cardWindSpeed"></div>
+                            <div class="cardHumidity"></div>
+                        </div>
+                        <div id="thirdDayofWeekForecast" class="dayCard">
+                            <div class="cardDayAndDate"></div>
+                            <div class="cardLowAndHighTemp"></div>
+                            <div class="cardAvgTemp"></div>
+                            <div class="cardIcon"></div>
+                            <div class="cardSummary"></div>                       
+                            <div class="cardWindSpeed"></div>
+                            <div class="cardHumidity"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="back">
+
+                        <div class="rotateIconContainer">
+                            <div class="rotateIcon"></div>
+                        </div>
+
+                        <div id="fourthDayofWeekForecast" class="dayCard">
+                            <div class="cardDayAndDate"></div>
+                            <div class="cardLowAndHighTemp"></div>
+                            <div class="cardAvgTemp"></div>
+                            <div class="cardIcon"></div>
+                            <div class="cardSummary"></div>                       
+                            <div class="cardWindSpeed"></div>
+                            <div class="cardHumidity"></div>
+                        </div>
+                        <div id="fifthDayofWeekForecast" class="dayCard">
+                            <div class="cardDayAndDate"></div>
+                            <div class="cardLowAndHighTemp"></div>
+                            <div class="cardAvgTemp"></div>
+                            <div class="cardIcon"></div>
+                            <div class="cardSummary"></div>                       
+                            <div class="cardWindSpeed"></div>
+                            <div class="cardHumidity"></div>
+                        </div>
+                        <div id="sixthDayofWeekForecast" class="dayCard">
+                            <div class="cardDayAndDate"></div>
+                            <div class="cardLowAndHighTemp"></div>
+                            <div class="cardAvgTemp"></div>
+                            <div class="cardIcon"></div>
+                            <div class="cardSummary"></div>                       
+                            <div class="cardWindSpeed"></div>
+                            <div class="cardHumidity"></div>
+                        </div>
+                        <div id="seventhDayofWeekForecast" class="dayCard">
+                            <div class="cardDayAndDate"></div>
+                            <div class="cardLowAndHighTemp"></div>
+                            <div class="cardAvgTemp"></div>
+                            <div class="cardIcon"></div>
+                            <div class="cardSummary"></div>                       
+                            <div class="cardWindSpeed"></div>
+                            <div class="cardHumidity"></div>
+                        </div>
+                    </div>
+ 
+                </div>
+
+                <div id="graphContainer">
+                        <div id="todayForecastTitle">Local Bi-Hourly Forecast &#186C</div>
+                        <div id="graphSizing">
+                                <canvas id="myChart"></div>
+                        </div>
+                </div>
+        </div>
+
+    </div>
+    
+</body>
+
+    <script>
+        function autoCompleteSearch(){
+        var inputFromSearch = document.getElementById('searchInput');
+        var autoCompleteData = new google.maps.places.Autocomplete(inputFromSearch);
+    }
+    </script>
+
+    <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5qGd5fe8Pty63Lvz__34I3VuNT8mt3gg&libraries=places&callback=autoCompleteSearch"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+    <script src="js/script.js" crossorigin="anonymous"></script> 
+   
+</html>
